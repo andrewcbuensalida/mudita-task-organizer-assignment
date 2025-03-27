@@ -107,7 +107,7 @@ The frontend will be available at `http://localhost:5173`
   - Remove pypiwin32==223 and pywin32==308 from requirements.txt
   - `eb init --platform python-3.12 --region us-west-1 task-organizer` <- This creates an application in eb
   - `eb create --region us-west-1 task-organizer-dev` <- This creates everything else like zip and upload to s3, security group, environment, autoscaling group, cloudwatch alarm, ec2, loadbalancer
-  - Add environment variables in configuration in eb console or `eb setenv OPENAI_API_KEY=your_key_here`
+  - Add environment variables in configuration in eb console or `eb setenv OPENAI_API_KEY=your_key_here PORT=8000`
   - `eb deploy` To update environment. IMPORTANT! It only zips latest commit, so commit before running this.
   - get the endpoint `eb status`
   - If it fails to deploy, allow all traffic in the security group of the ec2 instance, then connect to it, then check `cat /var/log/eb-engine.log`
