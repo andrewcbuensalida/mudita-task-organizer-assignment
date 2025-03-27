@@ -24,6 +24,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def health_check():
+    return {"status": "healthy", "service": "Task Planner API", "version": "1.0.0"}
+
+
 class TaskRequest(BaseModel):
     tasks: List[str]
 
@@ -89,4 +94,5 @@ async def plan_tasks(request: TaskRequest):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", "8000"))
+    uvicorn.run(app, host="0.0.0.0", port=port)
