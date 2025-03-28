@@ -61,3 +61,7 @@ The backend will be available at `http://localhost:8000`
     -   Pydantic
 
 
+## To deploy to render.com
+- build command should be `pip install -r requirements.txt`
+- run command should be `gunicorn main:app -w 1 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000`
+- enter the environment variables ALLOWED_ORIGINS, OPENAI_API_KEY, PORT. ALLOWED_ORIGINS comes from after deploying frontend on vercel.
