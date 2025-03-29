@@ -1,5 +1,7 @@
 The front-end is https://github.com/andrewcbuensalida/mudita-frontend.git
 
+Design diagram: https://lucid.app/lucidchart/548bf760-f443-46e4-9889-5f34a2279066/edit?viewport_loc=-2006%2C-670%2C5381%2C2350%2C0_0&invitationId=inv_794c9873-a298-4907-bd66-a589151902bc
+
 # Task Planner Application
 
 A web application that helps users plan their daily tasks using AI. The application uses OpenAI's GPT model to create an optimal schedule based on task dependencies, time of day appropriateness, and other factors.
